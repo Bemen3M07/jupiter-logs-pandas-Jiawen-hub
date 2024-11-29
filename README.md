@@ -27,30 +27,13 @@ ja que en un escenari real amb un programa certament complex el terminal pot est
 i entendre el que esta passant.
 
 Exercici 2 part 3:
-**Mètode**                                                                                                                                                                              
-|------------------------------------------------------    |
-| **Configuració per defecte del mòdul `logging`**         |                         
-| **Instanciar un objecte logger i parametritzar-lo**      |
-| **Instanciar un logger des d’un fitxer de configuració** | 
+## Comparació de Maneres de Fer Logs
 
-| **Exemple**                                                                                                                                  |------------------------------------------------------------------------------------------------------|
-| ```python<br>import logging<br>logging.basicConfig(level=logging.INFO)<br>logging.info("Missatge informatiu")<br>```     
-
-| ```python<br>logger = logging.getLogger("app_logger")<br>handler = logging.FileHandler("app.log")<br>logger.addHandler(handler)<br>```      
-
-| - Fitxer de configuració (JSON):<br>`{"version":1,"handlers":{"file":{"class":"logging.FileHandler","filename":"app.log"}}}`<br>- Programa:<br>`logging.config.dictConfig(config)` 
-
-| **Avantatges**       
-|------------------------------------------------------------------------------------------------------|
-| - Fàcil d'implementar<br>- Ideal per a projectes petits<br>- No cal configurar explícitament *handlers* ni *formatters*. |
-| - Alta flexibilitat<br>- Suporta múltiples *handlers* i configuracions avançades.<br>- Pot separar el *logging* per mòduls. |
-| - Centralitza configuracions complexes<br>- Pot ser fàcilment modificable sense tocar el codi<br>- Ideal per a grans aplicacions. |
-
-| **Desavantatges**                                               
-| - Limitat en funcionalitat<br>- Difícil d'adaptar en aplicacions grans<br>- No suporta configuracions avançades. |
-| - Necessita més codi per a configuració inicial<br>- Pot ser confús si no està ben documentat.          |
-| - Afegir fitxers externs pot complicar la distribució<br>- No és intuïtiu si no es coneixen els formats. |
-
+| **Mètode**                                           | **Exemple**                                                                                                                                   | **Avantatges**                                                                                       | **Desavantatges**                                                                                     |
+|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **Configuració per defecte del mòdul `logging`**     | ```python<br>import logging<br>logging.basicConfig(level=logging.INFO)<br>logging.info("Missatge informatiu")<br>```                          | - Fàcil d'implementar<br>- Ideal per a projectes petits<br>- No cal configurar explícitament *handlers* ni *formatters*. | - Limitat en funcionalitat<br>- Difícil d'adaptar en aplicacions grans<br>- No suporta configuracions avançades. |
+| **Instanciar un objecte logger i parametritzar-lo**  | ```python<br>logger = logging.getLogger("app_logger")<br>handler = logging.FileHandler("app.log")<br>logger.addHandler(handler)<br>```        | - Alta flexibilitat<br>- Suporta múltiples *handlers* i configuracions avançades.<br>- Pot separar el *logging* per mòduls. | - Necessita més codi per a configuració inicial<br>- Pot ser confús si no està ben documentat.          |
+| **Instanciar un logger des d’un fitxer de configuració** | - Fitxer de configuració (JSON):<br>`{"version":1,"handlers":{"file":{"class":"logging.FileHandler","filename":"app.log"}}}`<br>- Programa:<br>`logging.config.dictConfig(config)` | - Centralitza configuracions complexes<br>- Pot ser fàcilment modificable sense tocar el codi<br>- Ideal per a grans aplicacions. | - Afegir fitxers externs pot complicar la distribució<br>- No és intuïtiu si no es coneixen els formats. |
 
 
 
