@@ -1,0 +1,6 @@
+Que creieu que és millor mostrar els logs per exemple a la terminal durant l'execució del programa o bolcar-los en un fitxer de text? 
+Afegiu al readme.md del repositori aquesta pregunta amb la seva reposta 
+
+És molt més millor i practic revisar els logs bolcats en fitxer de text perqué d'aquesta forma és molt més fàcil de poder debuggear
+ja que en un escenari real amb un programa certament complex el terminal pot esta "spamejad" per logs i errors i no seria gaira fàcil de llegir 
+i entendre el que esta pas
