@@ -1,5 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ULiw8LbN)
-# Empty
+# Not Empty
 Exercici 1:
 tail -f /etc/mp/fitxer.log Per analitzar els logs de un fitxer.log. 
 grep "paraula_a_cercar" /etc/mp/fitxer.log Per trobar la paraula encronquet dintre del fitxer log.
