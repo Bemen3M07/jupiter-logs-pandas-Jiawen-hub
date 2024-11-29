@@ -59,4 +59,4 @@ Exercici 3:
 
 Pandas:
 
-![Alt text](/Images/Screenshot%202024-11-29%20194346.png)
+![Alt text](/Images/Screenshot_2024-11-29_194346.png)
