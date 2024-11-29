@@ -52,3 +52,11 @@ Exercici 2 part 4:
 | **Mètode per fer log**             | ```java<br>logger.info("Missatge informatiu");<br>logger.error("Missatge d'error");``` | ```javascript<br>logger.info("Missatge informatiu");<br>logger.error("Missatge d'error");``` |
 | **Tipus de manegadors (pantalla, fitxer…)** | - ConsoleAppender (pantalla).<br>- FileAppender (fitxer).<br>- RollingFileAppender (fitxers amb rotació).<br>- AsyncAppender (asíncron). | - Console (pantalla).<br>- File (fitxer).<br>- HTTP (envia logs via HTTP). |
 | **Opcions de format**              | Definides en un fitxer de configuració (XML, JSON, YAML). Exemple:<br>```xml<br><PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/><br>``` | Definides en la configuració de Winston. Exemple:<br>```javascript<br>winston.format.printf(({ level, message, timestamp }) => {<br>return `${timestamp} ${level}: ${message}`;<br>});<br>``` |
+
+
+
+Exercici 3:
+
+ReportLab:
+
+![Alt text](Images/Screenshot 2024-11-29 194346.png)
