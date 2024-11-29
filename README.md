@@ -57,6 +57,6 @@ Exercici 2 part 4:
 
 Exercici 3:
 
-ReportLab:
+Pandas:
 
-![Alt text](Images/Screenshot 2024-11-29 194346.png)
+![Alt text](/Images/Screenshot%202024-11-29%20194346.png)
