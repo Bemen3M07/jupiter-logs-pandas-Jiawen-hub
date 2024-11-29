@@ -25,3 +25,28 @@ Afegiu al readme.md del repositori aquesta pregunta amb la seva reposta
 És molt més millor i practic revisar els logs bolcats en fitxer de text perqué d'aquesta forma és molt més fàcil de poder debuggear
 ja que en un escenari real amb un programa certament complex el terminal pot esta "spamejad" per logs i errors i no seria gaira fàcil de llegir 
 i entendre el que esta passant.
+
+
+**Mètode**                                                                                                                                                                              
+|------------------------------------------------------    |
+| **Configuració per defecte del mòdul `logging`**         |                         
+| **Instanciar un objecte logger i parametritzar-lo**      |
+| **Instanciar un logger des d’un fitxer de configuració** | 
+
+| **Exemple**                                                                                                                                  |------------------------------------------------------------------------------------------------------|
+| ```python<br>import logging<br>logging.basicConfig(level=logging.INFO)<br>logging.info("Missatge informatiu")<br>```     
+
+| ```python<br>logger = logging.getLogger("app_logger")<br>handler = logging.FileHandler("app.log")<br>logger.addHandler(handler)<br>```      
+
+| - Fitxer de configuració (JSON):<br>`{"version":1,"handlers":{"file":{"class":"logging.FileHandler","filename":"app.log"}}}`<br>- Programa:<br>`logging.config.dictConfig(config)` 
+
+| **Avantatges**       
+|------------------------------------------------------------------------------------------------------|
+| - Fàcil d'implementar<br>- Ideal per a projectes petits<br>- No cal configurar explícitament *handlers* ni *formatters*. |
+| - Alta flexibilitat<br>- Suporta múltiples *handlers* i configuracions avançades.<br>- Pot separar el *logging* per mòduls. |
+| - Centralitza configuracions complexes<br>- Pot ser fàcilment modificable sense tocar el codi<br>- Ideal per a grans aplicacions. |
+
+| **Desavantatges**                                               
+| - Limitat en funcionalitat<br>- Difícil d'adaptar en aplicacions grans<br>- No suporta configuracions avançades. |
+| - Necessita més codi per a configuració inicial<br>- Pot ser confús si no està ben documentat.          |
+| - Afegir fitxers externs pot complicar la distribució<br>- No és intuïtiu si no es coneixen els formats. |
