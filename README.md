@@ -60,3 +60,8 @@ Exercici 3:
 Pandas:
 
 ![Alt text](/Images/Screenshot_2024-11-29_194346.png)
+
+
+ReportLab:
+
+![Alt text](viviaosd.png)
